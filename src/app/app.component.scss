@@ -1,0 +1,16 @@
+// app.component.scss
+.app-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .app-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  
+    @media (max-width: 768px) {
+      padding: 10px;
+    }
+  }
+  

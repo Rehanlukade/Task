@@ -1,0 +1,78 @@
+// search-bar.component.scss
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Increase the gap for better spacing */
+  margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Increase the gap between avatar and user info */
+  
+  .avatar {
+    width: 120px; /* Increase avatar size */
+    height: 120px; /* Increase avatar size */
+    border-radius: 50%;
+
+    @media (max-width: 768px) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  .user-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 20px; /* Increase name font size */
+    
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 16px; /* Increase username font size */
+    color: #555;
+    
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px 15px; /* Adjust padding for input */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.search-bar .search-button {
+  padding: 10px 15px; /* Adjust padding for button */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px; /* Increase button text size */
+}
+
+.search-bar .search-button:hover {
+  background-color: #0056b3;
+}

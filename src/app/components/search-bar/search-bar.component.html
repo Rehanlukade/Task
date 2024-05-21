@@ -1,0 +1,22 @@
+<!-- src/app/components/search-bar/search-bar.component.html -->
+<div class="search-bar">
+  <div *ngIf="userProfile" class="user-profile">
+    <img [src]="userProfile.avatar_url" alt="Avatar" class="avatar">
+    <div class="user-info">
+      <h3>{{ userProfile.name }}</h3>
+      <p>{{ userProfile.login }}</p>
+    </div>
+  </div>
+  <input 
+    type="text" 
+    placeholder="Enter GitHub username" 
+    [(ngModel)]="username" 
+    class="p-2 border border-gray-300 rounded-l-md focus:outline-none"
+  >
+  <button 
+    (click)="onSearch()" 
+    class="search-button"
+  >
+    Search
+  </button>
+</div>

@@ -1,0 +1,37 @@
+<!-- src/app/components/repository-list/repository-list.component.html -->
+<div *ngIf="error" class="error-message">
+  {{ error }}
+</div>
+<div *ngIf="isLoading" class="repository-list">
+  <!-- Skeleton loader elements -->
+  <div class="repository-card skeleton" *ngFor="let i of [1,2,3,4,5]">
+    <h3 class="skeleton-title"></h3>
+    <p class="skeleton-text"></p>
+    <div class="tags">
+      <span class="skeleton-tag" *ngFor="let j of [1,2,3]"></span>
+    </div>
+  </div>
+</div>
+<div *ngIf="!isLoading && repositories.length > 0">
+  <div class="repository-list">
+    <div *ngFor="let repo of repositories" class="repository-card">
+      <h3>{{ repo.name }}</h3>
+      <p>{{ repo.description }}</p>
+      <div class="tags">
+        <span class="tag" *ngFor="let tag of repo.topics">{{ tag }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="pagination-controls">
+    <label for="pageSize">Items per page:</label>
+    <select id="pageSize" [(ngModel)]="perPage" (change)="onPageSizeChange($event)">
+      <option *ngFor="let size of pageSizes" [value]="size">{{ size }}</option>
+    </select>
+    <button (click)="previousPage()" [disabled]="page === 1">« Previous</button>
+    <span>Page {{ page }}</span>
+    <button (click)="nextPage()" [disabled]="repositories.length < perPage">Next »</button>
+  </div>
+</div>
+<div *ngIf="!isLoading && repositories.length === 0 && !error">
+  No repositories found.
+</div>
