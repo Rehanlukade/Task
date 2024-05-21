@@ -4,8 +4,6 @@ Certainly! Let's include information about testing in the README:
 
 # GitHub Repositories Listing Page
 
-![GitHub Repositories Listing Page](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a90590ab-b535-4b79-8081-9a4a5939bad4/Screenshot_2021-05-17_at_3.48.42_PM.png)
-
 ## Introduction
 
 This Angular application is designed to fetch and display public GitHub repositories of a user. It provides a user-friendly interface to search for GitHub users and view their repositories with pagination and skeleton loading features.
@@ -98,6 +96,3 @@ We welcome contributions to improve this project! To contribute, follow these st
 
 This project is licensed under the [MIT License](LICENSE).
 
----
-
-Feel free to customize this README further based on your project's specific details and requirements. Let me know if you need any more assistance!
