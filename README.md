@@ -1,6 +1,3 @@
-Certainly! Let's include information about testing in the README:
-
----
 
 # GitHub Repositories Listing Page
 
